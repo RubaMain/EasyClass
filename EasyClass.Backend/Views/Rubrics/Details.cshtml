@@ -1,0 +1,42 @@
+﻿@model EasyClass.Common.Models.Rubric
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rubric</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RubricTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RubricTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RubricDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RubricDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RubricDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RubricDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RubricId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
