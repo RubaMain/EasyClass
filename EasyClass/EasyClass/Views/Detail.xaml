@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyClass.Views.Detail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cerrar Sesión"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="blackboard.png" Aspect="AspectFill" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout HorizontalOptions="Center" Padding="30,20" Grid.Row="1">
+
+                    <Label Text="BIENVENIDO A" FontSize="30" 
+                HorizontalOptions="Center"
+                TextColor="White" />
+                    <Image Grid.Row="0" Source="EASYClass4.png" WidthRequest="200" HeightRequest="200" />
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

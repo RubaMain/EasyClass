@@ -1,7 +1,9 @@
-﻿namespace EasyClass.Domain.Models
-{
-    using System.Data.Entity;
+﻿using EasyClass.Common.Models;
+using System.Data.Entity;
 
+namespace EasyClass.Domain.Models
+{
+  
     public class DataContext : DbContext
     {
         public DataContext() : base("DefaultConnection")
@@ -9,6 +11,6 @@
 
         }
 
-        public System.Data.Entity.DbSet<EasyClass.Common.Models.Rubric> Rubrics { get; set; }
+        public DbSet<Rubric> Rubrics { get; set; }
     }
 }

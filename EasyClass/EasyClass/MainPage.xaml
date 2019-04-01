@@ -1,14 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:EasyClass"
-             x:Class="EasyClass.MainPage">
+             x:Class="EasyClass.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Bienvenido a EasyClass!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Grid>
+            <Image Source="blackboard.png" Aspect="AspectFill" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="EASYClass4.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0" />
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Label Text="INICIA SESION INGRESANDO TUS DATOS" TextColor="White" FontSize="16" Margin="0,0,0,60"/>
+                    <BoxView BackgroundColor="White" HeightRequest="2" />
+                    <Entry x:Name="id_usuario" Placeholder="Nombre de Usuario" PlaceholderColor="White" TextColor="White" />
+                    <BoxView BackgroundColor="White" HeightRequest="2" />
+                    <Entry x:Name="password_usuario" Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True" TextColor="White" />
+                    <BoxView BackgroundColor="White" HeightRequest="2" VerticalOptions="Fill" />
+                    <Button x:Name="btnEntrar" 
+                            VerticalOptions="Fill" 
+                            Text="Iniciar sesion" 
+                            BackgroundColor="White"
+                            BorderRadius="20" 
+                            TextColor="Black" 
+                            Clicked="btnEntrar_Clicked"
+                            Margin="0,20,0,0"
+                            
+                    />
+                </StackLayout>
+            </Grid>
+        </Grid>
     </StackLayout>
 
 </ContentPage>

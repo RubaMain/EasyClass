@@ -1,9 +1,11 @@
 ﻿namespace EasyClass.Backend.Models
 {
+    using EasyClass.Common.Models;
     using EasyClass.Domain.Models;
+    using System.Data.Entity;
 
     public class LocalDataContext : DataContext
     {
-        public System.Data.Entity.DbSet<EasyClass.Common.Models.Rubric> Rubrics { get; set; }
+        public DbSet <Rubric> Rubrics { get; set; }
     }
 }

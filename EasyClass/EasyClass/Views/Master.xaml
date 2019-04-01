@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyClass.Views.Master"
+             Title="Master">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="blackboard.png" Aspect="AspectFill" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1" Margin="15,20,15,0" >
+                    <Label Text="MENU DE OPCIONES" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" Margin="0,0,0,60"   />
+                    <Label Text="Ingresa con el boton de 'MENU RUBRICAS' para acceder a tus rubricas pendientes" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                    <BoxView BackgroundColor="White" HeightRequest="2" />
+                    <Button x:Name="btnRubricas" Text="MENU DE RUBRICAS" BackgroundColor="White" BorderRadius="20" TextColor="Black" Clicked="btnRubricas_Clicked" />
+                    <BoxView BackgroundColor="White" HeightRequest="2" Margin="0,0,0,240" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
