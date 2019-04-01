@@ -8,4 +8,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
 </Project>

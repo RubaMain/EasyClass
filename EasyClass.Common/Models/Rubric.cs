@@ -16,5 +16,10 @@
 
         [Required]
         public DateTime RubricDate { get; set; }
+
+        public override string ToString()
+        {
+            return this.RubricTitle;
+        }
     }
 }
