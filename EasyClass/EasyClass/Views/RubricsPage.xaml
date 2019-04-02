@@ -10,6 +10,18 @@
             BindingContext="{Binding Rubrics}">
             <ListView
                 ItemsSource="{Binding Rubrics}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                                <Label Text="{Binding RubricTitle}"/>
+                                <Label Text="{Binding RubricDescription}"/>
+                            <Button Text="Detalles"
+                                    IsVisible="{Binding IsVisible}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyClass.Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,15 @@ namespace EasyClass.Views
         {
             InitializeComponent();
 
+        }
+
+        private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var vm = BindingContext as RubricsViewModel;
+
+            var rubrics = e.Item as Rubric;
+
+            vm.HideOrShowRubric(rubrics);
         }
     }
 }

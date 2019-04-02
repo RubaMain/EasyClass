@@ -4,42 +4,58 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<style type="text/css">
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RubricTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RubricDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RubricDate)
-        </th>
-        <th></th>
-    </tr>
+<body background="~/Images/Blackboard-2007.jpg">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RubricTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RubricDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RubricDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RubricId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RubricId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RubricId })
-        </td>
-    </tr>
-}
+    <font color="white">
+        <h2>Rúbricas</h2>
 
-</table>
+        <font color="black">
+            <p>
+                @Html.ActionLink("Crear nueva rúbrica", "Create", null, new { @class = "btn btn-default" })
+            </p>
+        </font>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RubricTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RubricDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RubricDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RubricTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RubricDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RubricDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.RubricId, }) |
+                        @Html.ActionLink("Detalles", "Details", new {  id = item.RubricId,  }) |
+                        @Html.ActionLink("Eliminar", "Delete", new {  id = item.RubricId, })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </font>
+
+</body>

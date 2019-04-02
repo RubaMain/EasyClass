@@ -28,6 +28,11 @@ public class RubricsViewModel : BaseViewModel
         this.LoadRubrics();
     }
 
+    public void HideOrShowRubric(Rubric rubric)
+    {
+        rubric.IsVisible = true;
+    }
+
     //Metodo asincrono para refrescar la consulta de
     //una lista de rúbricas desde la app sin salir de ella.
     private async void LoadRubrics()

@@ -3,40 +3,51 @@
 @{
     ViewBag.Title = "Details";
 }
+<style type="text/css">
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
 
-<h2>Details</h2>
+<body background="~/Images/Blackboard-2007.jpg">
 
-<div>
-    <h4>Rubric</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.RubricTitle)
-        </dt>
+    <font color="white">
+        <h2>Detalles</h2>
 
-        <dd>
-            @Html.DisplayFor(model => model.RubricTitle)
-        </dd>
+        <div>
+            <h4>Rubric</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.RubricTitle)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RubricDescription)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.RubricTitle)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RubricDescription)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.RubricDescription)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RubricDate)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.RubricDescription)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RubricDate)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.RubricDate)
+                </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RubricId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                <dd>
+                    @Html.DisplayFor(model => model.RubricDate)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.RubricId }) |
+            @Html.ActionLink("Devuelta a la lista de rubricas", "Index",null,new {@class = "btn btn-default" })
+        </p>
+        </font>
+</body>
