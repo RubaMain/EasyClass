@@ -9,7 +9,11 @@
         <StackLayout
             BindingContext="{Binding Rubrics}">
             <ListView
-                ItemsSource="{Binding Rubrics}">
+                IsRefreshing="{Binding IsRefreshing}"
+                IsPullToRefreshEnabled="True"
+                ItemsSource="{Binding Rubrics}"
+                RefreshCommand="{Binding RefreshCommand}">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                     <ViewCell>
