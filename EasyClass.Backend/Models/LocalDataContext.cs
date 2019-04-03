@@ -6,6 +6,6 @@
 
     public class LocalDataContext : DataContext
     {
-        public DbSet <Rubric> Rubrics { get; set; }
+        public DbSet <Rubric> rubrics { get; set; }
     }
 }

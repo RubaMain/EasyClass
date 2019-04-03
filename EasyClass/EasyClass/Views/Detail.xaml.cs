@@ -17,12 +17,13 @@ namespace EasyClass.Views
             InitializeComponent();
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            var _navigation = Application.Current.MainPage.Navigation;
-            var _lastPage = Navigation.NavigationStack.LastOrDefault();
-            _navigation.RemovePage(_lastPage);
-            _navigation.PushAsync(new MainPage());
+            //var _navigation = Application.Current.MainPage.Navigation;
+            //var _lastPage = Navigation.NavigationStack.LastOrDefault();
+            //_navigation.RemovePage(_lastPage);
+            //_navigation.PushAsync(new MainPage());
+            await ((NavigationPage)this.Parent).PushAsync(new MainPage());
         }
     }
 }
